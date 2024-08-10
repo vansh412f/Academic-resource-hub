@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect With People - VIT Academic Resource Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">VIT Academic Resource Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="virtual-labs.html">Virtual Labs</a></li>
+                <li><a href="analysis.html">Academic Data Analysis</a></li>
+                <li><a href="connect.html">Connect With People</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="connect-section">
+        <h1 class="centered-heading">Connect With People</h1>
+
+        <div class="container">
+            <div class="left">
+                <div class="chat-container">
+                    <h2>Anonymously Chat</h2>
+                    <p>To chat anonymously, please <a href="mailto:anonymous@vit.edu" style="color: #00ffcc;">send an email</a> to our anonymous chat service. Your identity will be kept confidential.</p>
+                </div>
+            </div>
+
+            <div class="middle">
+                <h2>Connect With Peers</h2>
+                <table class="contact-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Reg No.</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yash Sushil</td>
+                            <td>23bce10538</td>
+                            <td><a href="sms:+919113214538" style="color: #00ffcc;">+91 9113214538</a></td>
+                        </tr>
+                        <tr>
+                            <td>Vansh</td>
+                            <td>23bce10046</td>
+                            <td><a href="sms:+917357243145" style="color: #00ffcc;">+91 7357243145</a></td>
+                        </tr>
+                        <tr>
+                            <td>Anuruddh Pratap</td>
+                            <td>23bce10609</td>
+                            <td><a href="sms:+916386231397" style="color: #00ffcc;">+91 6386231397</a></td>
+                        </tr>
+                        <tr>
+                            <td>Abhay Kumar</td>
+                            <td>23bce10795</td>
+                            <td><a href="sms:+919110133808" style="color: #00ffcc;">+91 9110133808</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="right">
+                <h2>Connect With Mentors</h2>
+                <div class="dropdown">
+                    <select id="mentor-select">
+                        <option value="">Select a mentor</option>
+                        <option value="1">AANJAN KUMAR</option>
+                        <option value="2">Mr. ABDUL RAHUMAN SUTHESI</option>
+                        <option value="3">ABHA TRIVEDI</option>
+                        <option value="4">ABHAY VIDHYARTHI</option>
+                        <option value="5">ABRAR YAQOOB</option>
+                        <option value="6">AJAY SHARMA</option>
+                        <option value="7">ANANT KANT SUKHLA</option>
+                        <option value="8">ARINDAM SADHUKHAN</option>
+                        <option value="9">AZRA NAZIR</option>
+                        <option value="10">Dr. BALAJI A</option>
+                        <option value="11">BHUMIKA CHOKSI</option>
+                        <option value="12">CHANDAN KUMAR BEHERA</option>
+                        <option value="13">CHANDRAMA SWAIN</option>
+                        <option value="14">DEEP CHANDRA UPADHYAY</option>
+                        <option value="15">D. SARAVANAN</option>
+                        <option value="16">GANESHAN R</option>
+                        <option value="17">G.R. HEMALAKSHMI</option>
+                        <option value="18">HEMANT KUMAR NASHINE</option>
+                        <option value="19">SANGRAM</option>
+                    </select>
+                </div>
+                <div id="mentor-info" class="mentor-info">
+                    <!-- Mentor details will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer id="contact" class="footer">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:yash.sushil16@gmail.com?subject=Your%20Subject&body=Your%20Message">yash.sushil16@gmail.com</a></p>
+        <p>Phone: <a href="sms:+919110133808" style="color: #00ffcc;">+91 9110133808</a></p>
+        <p>&copy; 2024 VIT Academic Resource Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const mentors = {
+            1: {
+                name: 'AANJAN KUMAR',
+                email: 'aanjan.kumar@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            2: {
+                name: 'Mr. ABDUL RAHUMAN SUTHESI',
+                email: 'abdul.suthesi@vitbhopal.ac.in',
+                post: 'Assistant Professor'
+            },
+            3: {
+                name: 'ABHA TRIVEDI',
+                email: 'Abhatrivedi2021@vitbhopal.ac.in',
+                post: 'Assistant Professor'
+            },
+            4: {
+                name: 'ABHAY VIDHYARTHI',
+                email: 'abhay.vidyarthi@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            5: {
+                name: 'ABRAR YAQOOB',
+                email: 'abrar.yaqoob2022@vitbhopal.ac.in',
+                post: 'Assistant Professor'
+            },
+            6: {
+                name: 'AJAY SHARMA',
+                email: 'ajaysharma@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            7: {
+                name: 'ANANT KANT SUKHLA',
+                email: 'anantkant.shukla@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            8: {
+                name: 'ARINDAM SADHUKHAN',
+                email: 'arindamsadhukhan@vitbhopal.ac.in',
+                post: 'Assistant Professor'
+            },
+            9: {
+                name: 'AZRA NAZIR',
+                email: 'azranazir@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            10: {
+                name: 'Dr. BALAJI A',
+                email: 'balaji.a@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            11: {
+                name: 'BHUMIKA CHOKSI',
+                email: 'bhumika.choksi@vitbhopal.ac.in',
+                post: 'Assistant Professor'
+            },
+            12: {
+                name: 'CHANDAN KUMAR BEHERA',
+                email: 'chandank.behera@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            13: {
+                name: 'CHANDRAMA SWAIN',
+                email: 'chandrama.swain@vitbhopal.ac.in',
+                post: 'Assistant Professor'
+            },
+            14: {
+                name: 'DEEP CHANDRA UPADHYAY',
+                email: 'deepchandra.upadhyay2022@vitbhopal.ac.in',
+                post: 'Staff'
+            },
+            15: {
+                name: 'D. SARAVANAN',
+                email: 'saravanan.d@vitbhopal.ac.in',
+                post: 'Assistant Professor'
+            },
+            16: {
+                name: 'GANESHAN R',
+                email: 'ganeshan.r@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            17: {
+                name: 'G.R. HEMALAKSHMI',
+                email: 'hemalakshmi@vitbhopal.ac.in',
+                post: 'Staff'
+            },
+            18: {
+                name: 'HEMANT KUMAR NASHINE',
+                email: 'hemantkumar.nashine@vitbhopal.ac.in',
+                post: 'Professor'
+            },
+            19: {
+                name: 'SANGRAM',
+                email: 'sangramkesharidas@vitbhopal.ac.in',
+                post: 'Professor'
+            }
+        };
+
+        document.getElementById('mentor-select').addEventListener('change', function() {
+            const selected = this.value;
+            const mentorInfo = document.getElementById('mentor-info');
+            if (selected) {
+                const mentor = mentors[selected];
+                mentorInfo.innerHTML = `
+                    <h3>${mentor.name}</h3>
+                    <p><a href="mailto:${mentor.email}" style="color: #00ffcc;">${mentor.email}</a></p>
+                    <p>${mentor.post}</p>
+                `;
+                mentorInfo.style.display = 'block';
+            } else {
+                mentorInfo.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

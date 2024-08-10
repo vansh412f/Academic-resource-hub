@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Experiments - VIT Academic Resource Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">VIT Academic Resource Hub</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#resources">Resources</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="labs-section">
+        <h2>Lab Experiments</h2>
+        <p class="intro">Lab experiments provide students with an interactive environment for conducting experiments and exploring various scientific phenomena. They are an excellent resource for supplementing traditional lab experiences, allowing students to experiment with concepts in a risk-free, virtual setting. Below you will find links to various lab experiments offered at VIT.</p>
+        <div class="labs-list">
+            <div class="lab" style="background-image: url('https://img.freepik.com/free-vector/science-lab-drawing-theme_23-2148484579.jpg');" onclick="toggleSubLabs('chemistry')">
+                <h3>Chemistry</h3>
+                <p>Go to Chemistry</p>
+            </div>
+            <div id="chemistry" class="sub-labs">
+                <a href="lab-details.html?sub_lab=hardwater-strength-calculation">Hardwater Strength Calculation</a>
+                <a href="lab-details.html?sub_lab=standardisation-of-edta">Standardisation of EDTA</a>
+                <a href="lab-details.html?sub_lab=determination-of-alkalinity">Determination of Alkalinity</a>
+                <a href="lab-details.html?sub_lab=iodometry">Iodometry</a>
+            </div>
+
+            <div class="lab" style="background-image: url('https://www.shutterstock.com/image-vector/sketch-physics-lab-working-little-260nw-1359538835.jpg');" onclick="toggleSubLabs('physics')">
+                <h3>Physics</h3>
+                <p>Go to Physics</p>
+            </div>
+            <div id="physics" class="sub-labs">
+                <a href="lab-details.html?sub_lab=newtons-2nd-law">Newton's 2nd Law</a>
+                <a href="lab-details.html?sub_lab=plancks-constant">Planck's Constant</a>
+                <a href="lab-details.html?sub_lab=heisenbergs-uncertainty-principle">Heisenberg's Uncertainty Principle</a>
+                <a href="lab-details.html?sub_lab=optical-fibre">Optical Fibre</a>
+            </div>
+
+            <div class="lab" style="background-image: url('https://www.wiltronics.com.au/wp-content/uploads/setting-up-an-electronics-lab.jpg');" onclick="toggleSubLabs('electronics')">
+                <h3>Electronics</h3>
+                <p>Go to Electronics</p>
+            </div>
+            <div id="electronics" class="sub-labs">
+                <a href="lab-details.html?sub_lab=circuit-parameters">Circuit Parameters</a>
+                <a href="lab-details.html?sub_lab=magnetic-circuits-resonance">Magnetic Circuits Resonance</a>
+                <a href="lab-details.html?sub_lab=pn-junction-diode">PN Junction Diode</a>
+                <a href="lab-details.html?sub_lab=zener-diode">Zener Diode</a>
+            </div>
+
+            <div class="lab" style="background-image: url('https://as2.ftcdn.net/v2/jpg/06/27/89/17/1000_F_627891717_pySE5wGGjn53xlUWdf5ymnphgO2wNkw4.jpg');" onclick="toggleSubLabs('digital-logic')">
+                <h3>Digital Logic</h3>
+                <p>Go to Digital Logic</p>
+            </div>
+            <div id="digital-logic" class="sub-labs">
+                <a href="lab-details.html?sub_lab=adders">Adders</a>
+                <a href="lab-details.html?sub_lab=subtracters">Subtracters</a>
+                <a href="lab-details.html?sub_lab=bcd">BCD</a>
+                <a href="lab-details.html?sub_lab=flip-flops">Flip Flops</a>
+            </div>
+            <!-- Add more labs and sub-labs as needed -->
+        </div>
+    </section>
+
+
+    <footer id="contact" class="footer">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:yash.sushil16@gmail.com?subject=Your%20Subject&body=Your%20Message">yash.sushil16@gmail.com</a></p>
+        <p>Phone: <a href="sms:+919110133808" style="color: #00ffcc;">+91 9110133808</a></p>
+        <p>&copy; 2024 VIT Academic Resource Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleSubLabs(id) {
+            var subLabs = document.getElementById(id);
+            if (subLabs.classList.contains('open')) {
+                subLabs.classList.remove('open');
+            } else {
+                document.querySelectorAll('.sub-labs').forEach(lab => lab.classList.remove('open'));
+                subLabs.classList.add('open');
+            }
+        }
+    </script>
+</body>
+</html>

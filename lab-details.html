@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Details - VIT Academic Resource Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar nav ul li {
+            margin-left: 20px;
+        }
+
+        .navbar nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .lab-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #video-container {
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            border: none;
+            width: 80%;
+            height: 450px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2, h3 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">VIT Academic Resource Hub</div>
+        <nav>
+            <ul>
+                <li><a href="virtuallabs.html">Back to Labs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="lab-details">
+        <div class="content">
+            <h2 id="lab-title"></h2>
+            <div id="video-container">
+                <iframe id="video" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="info-container">
+                <h3>Aim</h3>
+                <p id="lab-aim"></p>
+                <h3>Materials Required</h3>
+                <p id="lab-materials"></p>
+                <h3>Procedure</h3>
+                <p id="lab-procedure"></p>
+                <h3>Observations</h3>
+                <p id="lab-observations"></p>
+                <h3>Results</h3>
+                <p id="lab-results"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2>Contact Us</h2>
+        <p>Email: pexposquad@vitbhopal.ac.in</p>
+        <p>Phone: +91 9113214538</p>
+        <p>&copy; 2024 VIT Academic Resource Hub. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Define the details for each sub-lab
+        const labDetails = {
+            'hardwater-strength-calculation': {
+                title: 'Hardwater Strength Calculation',
+                videoUrl: 'https://www.youtube.com/embed/emUuALptSbU',
+                aim: 'To determine the strength of hard water by complexometric titration method using EDTA.',
+                materials: 'Hard water sample, EDTA solution, Eriochrome Black T indicator, Burette, Pipette, Conical flask.',
+                procedure: '1. Pipette 25 ml of hard water sample into a conical flask. 2. Add 1-2 drops of Eriochrome Black T indicator. 3. Titrate with EDTA solution until the color changes from wine-red to blue. 4. Note the volume of EDTA used.',
+                observations: 'Volume of EDTA used: __ ml',
+                results: 'Strength of hard water: __ ppm'
+            },
+            'standardisation-of-edta': {
+                title: 'Standardisation of EDTA',
+                videoUrl: 'https://www.youtube.com/embed/_RXNGAS_YBw',
+                aim: 'To standardize the EDTA solution using a standard calcium carbonate solution.',
+                materials: 'Calcium carbonate standard solution, EDTA solution, Eriochrome Black T indicator, Burette, Pipette, Conical flask.',
+                procedure: '1. Pipette 25 ml of calcium carbonate solution into a conical flask. 2. Add 1-2 drops of Eriochrome Black T indicator. 3. Titrate with EDTA solution until the color changes from wine-red to blue. 4. Note the volume of EDTA used.',
+                observations: 'Volume of EDTA used: __ ml',
+                results: 'Concentration of EDTA: __ M'
+            },
+            'determination-of-alkalinity': {
+                title: 'Determination of Alkalinity',
+                videoUrl: 'https://www.youtube.com/embed/Lo13V7UgixY',
+                aim: 'To determine the alkalinity of a given water sample by titration method.',
+                materials: 'Water sample, HCl solution, Phenolphthalein indicator, Methyl orange indicator, Burette, Pipette, Conical flask.',
+                procedure: '1. Pipette 50 ml of water sample into a conical flask. 2. Add 2-3 drops of phenolphthalein indicator. 3. Titrate with HCl solution until the pink color disappears. 4. Add 2-3 drops of methyl orange indicator and continue titration until the color changes from yellow to red. 5. Note the volume of HCl used.',
+                observations: 'Volume of HCl used: __ ml',
+                results: 'Total alkalinity: __ mg/L'
+            },
+            'iodometry': {
+                title: 'Iodometry',
+                videoUrl: 'https://www.youtube.com/embed/Tj9hoy4hzGc',
+                aim: 'To determine the concentration of an oxidizing agent by iodometric titration.',
+                materials: 'Oxidizing agent solution, Potassium iodide, Starch indicator, Sodium thiosulfate solution, Burette, Pipette, Conical flask.',
+                procedure: '1. Pipette a known volume of the oxidizing agent solution into a conical flask. 2. Add an excess of potassium iodide solution. 3. Titrate with sodium thiosulfate solution until the yellow color almost disappears. 4. Add a few drops of starch indicator and continue titration until the blue color disappears. 5. Note the volume of sodium thiosulfate used.',
+                observations: 'Volume of sodium thiosulfate used: __ ml',
+                results: 'Concentration of oxidizing agent: __ M'
+            },
+            'newtons-2nd-law': {
+                title: 'Newton\'s 2nd Law',
+                videoUrl: 'https://www.youtube.com/embed/NCzHykpwZXs',
+                aim: 'To verify Newton\'s Second Law of Motion.',
+                materials: 'Dynamics trolley, Track, Pulley, Weights, Stopwatch, Meter scale.',
+                procedure: '1. Set up the track with the pulley at one end. 2. Attach the dynamics trolley to a string passing over the pulley with weights at the other end. 3. Release the trolley and measure the time taken for a known distance. 4. Repeat for different weights and distances.',
+                observations: 'Time taken: __ s, Distance: __ m',
+                results: 'Acceleration: __ m/s²'
+            },
+            'plancks-constant': {
+                title: 'Planck\'s Constant',
+                videoUrl: 'https://www.youtube.com/embed/gcMWPmnsaEE',
+                aim: 'To determine Planck\'s constant using the photoelectric effect.',
+                materials: 'Photoelectric apparatus, Light source, Filters, Voltmeter, Ammeter.',
+                procedure: '1. Set up the photoelectric apparatus with a known light source. 2. Measure the stopping voltage for different frequencies of light. 3. Plot the stopping voltage against the frequency of light. 4. Determine the slope of the graph.',
+                observations: 'Stopping voltage: __ V, Frequency: __ Hz',
+                results: 'Planck\'s constant: __ Js'
+            },
+            'heisenbergs-uncertainty-principle': {
+                title: 'Heisenberg\'s Uncertainty Principle',
+                videoUrl: 'https://www.youtube.com/embed/yQx1brDHuCs',
+                aim: 'To demonstrate Heisenberg\'s Uncertainty Principle using diffraction patterns.',
+                materials: 'Laser source, Single slit, Screen, Measuring scale.',
+                procedure: '1. Set up the laser to pass through a single slit and project onto the screen. 2. Measure the width of the central diffraction pattern. 3. Calculate the uncertainty in position and momentum.',
+                observations: 'Width of central maximum: __ mm',
+                results: 'Uncertainty in position: __ m, Uncertainty in momentum: __ kg·m/s'
+            },
+            'optical-fibre': {
+                title: 'Optical Fibre',
+                videoUrl: 'https://www.youtube.com/embed/hOel0cFAFg8',
+                aim: 'To study the propagation of light through an optical fibre.',
+                materials: 'Optical fibre, Light source, Detector, Measuring scale.',
+                procedure: '1. Connect the light source to one end of the optical fibre. 2. Measure the intensity of light at the other end using a detector. 3. Repeat for different lengths and bending angles of the fibre.',
+                observations: 'Light intensity: __, Length: __ m, Bending angle: __ degrees',
+                results: 'Attenuation: __ dB'
+            },
+            'circuit-parameters': {
+                title: 'Circuit Parameters',
+                videoUrl: 'https://www.youtube.com/embed/Xi1u9Y2vsYY',
+                aim: 'To determine the parameters of a given electrical circuit.',
+                materials: 'Resistors, Capacitors, Inductors, Multimeter, Power supply.',
+                procedure: '1. Measure the resistance, capacitance, and inductance of the given components using a multimeter. 2. Connect the components in series and parallel configurations and measure the total resistance, capacitance, and inductance. 3. Verify the results with theoretical calculations.',
+                observations: 'Resistance: __ Ω, Capacitance: __ F, Inductance: __ H',
+                results: 'Measured values match theoretical values.'
+            },
+            'magnetic-circuits-resonance': {
+                title: 'Magnetic Circuits Resonance',
+                videoUrl: 'https://www.youtube.com/embed/ZYgFuUl9_Vs',
+                aim: 'To study the resonance in magnetic circuits.',
+                materials: 'Inductor, Capacitor, AC generator, Oscilloscope.',
+                procedure: '1. Connect the inductor and capacitor in series with the AC generator. 2. Vary the frequency of the AC supply and observe the voltage across the components. 3. Identify the resonance frequency where the voltage is maximum.',
+                observations: 'Frequency: __ Hz, Voltage: __ V',
+                results: 'Resonance frequency: __ Hz'
+            },
+            'pn-junction-diode': {
+                title: 'PN Junction Diode',
+                videoUrl: 'https://www.youtube.com/embed/Gp4dnjN8kGw',
+                aim: 'To study the characteristics of a PN junction diode.',
+                materials: 'PN junction diode, Power supply, Multimeter, Resistor.',
+                procedure: '1. Connect the PN junction diode in forward and reverse bias configurations. 2. Measure the voltage and current across the diode. 3. Plot the V-I characteristics for both configurations.',
+                observations: 'Voltage: __ V, Current: __ A',
+                results: 'Forward voltage: __ V, Reverse breakdown voltage: __ V'
+            },
+            'zener-diode': {
+                title: 'Zener Diode',
+                videoUrl: 'https://www.youtube.com/embed/ryB36ixUp4w',
+                aim: 'To study the characteristics and applications of a Zener diode.',
+                materials: 'Zener diode, Power supply, Multimeter, Resistor.',
+                procedure: '1. Connect the Zener diode in reverse bias configuration. 2. Measure the voltage and current across the diode. 3. Plot the V-I characteristics. 4. Use the Zener diode for voltage regulation and measure the output voltage.',
+                observations: 'Voltage: __ V, Current: __ A',
+                results: 'Zener breakdown voltage: __ V, Regulated output voltage: __ V'
+            },
+            'adders': {
+                title: 'Adders',
+                videoUrl: 'https://www.youtube.com/embed/pFiFayVTXgA',
+                aim: 'To design and implement half adder and full adder circuits.',
+                materials: 'Logic gates (AND, OR, XOR), Breadboard, Power supply, Multimeter.',
+                procedure: '1. Connect the logic gates to form half adder and full adder circuits. 2. Apply various input combinations and observe the output. 3. Verify the truth table for both adders.',
+                observations: 'Input: __, Output: __',
+                results: 'Adder circuit functions correctly.'
+            },
+            'subtracters': {
+                title: 'Subtracters',
+                videoUrl: 'https://www.youtube.com/embed/pFiFayVTXgA',
+                aim: 'To design and implement half subtracter and full subtracter circuits.',
+                materials: 'Logic gates (AND, OR, XOR, NOT), Breadboard, Power supply, Multimeter.',
+                procedure: '1. Connect the logic gates to form half subtracter and full subtracter circuits. 2. Apply various input combinations and observe the output. 3. Verify the truth table for both subtracters.',
+                observations: 'Input: __, Output: __',
+                results: 'Subtracter circuit functions correctly.'
+            },
+            'bcd': {
+                title: 'BCD',
+                videoUrl: 'https://www.youtube.com/embed/NYMjW2K_9wg',
+                aim: 'To design and implement a BCD to 7-segment display decoder.',
+                materials: 'BCD to 7-segment decoder IC, 7-segment display, Breadboard, Power supply, Multimeter.',
+                procedure: '1. Connect the BCD to 7-segment decoder IC to the 7-segment display. 2. Apply BCD inputs and observe the output on the display. 3. Verify the display output for each BCD input.',
+                observations: 'Input: __, Output: __',
+                results: 'BCD to 7-segment display decoder functions correctly.'
+            },
+            'flip-flops': {
+                title: 'Flip Flops',
+                videoUrl: 'https://www.youtube.com/embed/UpMEiBKrgLs',
+                aim: 'To study the operation of different types of flip-flops (SR, JK, D, T).',
+                materials: 'Flip-flop ICs, Breadboard, Power supply, Multimeter.',
+                procedure: '1. Connect the flip-flop circuits on the breadboard. 2. Apply various input combinations and observe the output. 3. Verify the truth table for each type of flip-flop.',
+                observations: 'Input: __, Output: __',
+                results: 'Flip-flops function correctly.'
+            }
+        };
+
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const subLab = urlParams.get('sub_lab');
+
+        // Set video and information based on sub-lab
+        if (subLab in labDetails) {
+            document.getElementById('video').src = labDetails[subLab].videoUrl;
+            document.getElementById('lab-title').innerText = labDetails[subLab].title;
+            document.getElementById('lab-aim').innerText = labDetails[subLab].aim;
+            document.getElementById('lab-materials').innerText = labDetails[subLab].materials;
+            document.getElementById('lab-procedure').innerText = labDetails[subLab].procedure;
+            document.getElementById('lab-observations').innerText = labDetails[subLab].observations;
+            document.getElementById('lab-results').innerText = labDetails[subLab].results;
+        } else {
+            document.getElementById('video').src = '';
+            document.getElementById('lab-title').innerText = 'Lab Details';
+            document.getElementById('lab-aim').innerText = 'No details available for this lab.';
+            document.getElementById('lab-materials').innerText = '';
+            document.getElementById('lab-procedure').innerText = '';
+            document.getElementById('lab-observations').innerText = '';
+            document.getElementById('lab-results').innerText = '';
+        }
+    </script>
+</body>
+</html>

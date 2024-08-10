@@ -1,0 +1,839 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #00ffcc;
+    color: #0f0f0f;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero-section .hero-content {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #0f0f0f;
+    background-color: #00ffcc;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00bfa6;
+}
+
+.hero-image {
+    margin-left: 60px;
+    max-width: 45%; /* Image takes up 45% of the width */
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    object-fit: cover;
+}
+
+/* Resources Section */
+.resources-section {
+    padding: 2rem 1rem;
+    background-color: #1a1a1a;
+}
+
+.resources-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.resource-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.resource-cards .card {
+    background-color: #262626;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.resource-cards .card:hover {
+    transform: translateY(-5px);
+}
+/* Course Recommendation Section */
+.course-recommendation-section {
+    padding: 2rem 1rem;
+    background-color: #1a1a1a;
+}
+
+.course-recommendation-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.course-card {
+    background-color: #262626;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.course-card a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    border: 2px solid #00ffcc; /* Stylish border */
+}
+
+.course-card a:hover {
+    color: #00ffcc; /* Keep text color consistent with hover effect */
+}
+
+/* Course Link */
+.course-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-link:hover {
+    color: #00bfa6; /* Change color on hover */
+}
+
+/* About Section */
+.about-section {
+    padding: 2rem 1rem;
+    background-color: #0f0f0f;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+/* Analysis Section */
+.analysis-section {
+    padding: 3rem 2rem;
+    background-color: #1a1a1a;
+}
+
+.analysis-section h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #00ffcc;
+}
+
+.analysis-section p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #e0e0e0;
+}
+
+.analysis-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.chart-container, .actions-container {
+    flex: 1;
+}
+
+.chart-container {
+    background-color: #262626;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 100%;
+    max-width: 280px; /* Adjust as needed */
+    margin-right: 40rem; /* Move the pie chart box slightly to the right */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.pie-chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #333;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 100%; /* This makes the height equal to the width */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pie-chart p {
+    margin: 0;
+    font-size: 1rem;
+    transform: translateY(-15px); /* Shift the text upward */
+}
+/* Actions Container */
+.actions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #0f0f0f;
+    background-color: #00ffcc;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #00bfa6;
+    transform: scale(1.05);
+}
+/* Container to push footer to bottom */
+.main-content {
+    flex: 1;
+}
+/* Footer */
+.footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    /* margin-top: 2rem; Add space above the footer */
+}
+
+.footer p {
+    margin: 1rem 0; /* Add more space around the text */
+    color: #e0e0e0;
+    font-size: 1rem; /* Slightly larger font size for better readability */
+}
+
+.footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00ffcc; /* Make the heading color consistent with the navbar */
+}
+/* Additional styles for the Virtual Labs page */
+.labs-section {
+    padding: 2rem 1rem;
+    background-color: #0f0f0f;
+}
+
+.labs-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00ffcc;
+}
+
+.labs-section p.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+.labs-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.labs-list .lab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.labs-list .lab:hover {
+    transform: translateY(-5px);
+}
+
+.labs-list .lab::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.labs-list .lab h3, .labs-list .lab p {
+    position: relative;
+    z-index: 1;
+}
+
+.labs-list .lab h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #00ffcc;
+}
+
+.labs-list .lab p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.sub-labs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    width: 100%;
+    max-width: 600px;
+}
+
+.sub-labs.open {
+    max-height: 500px; /* Adjust based on content height */
+    opacity: 1;
+}
+
+.sub-labs a {
+    display: block;
+    width: 100%;
+    max-width: 180px; /* Increased width for bigger buttons */
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #262626;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sub-labs a:hover {
+    background-color: #00ffcc;
+    color: #0f0f0f;
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+/* Styles for the details section */
+.details-section {
+    background-color: #7a7a7a; /* Dark gray background */
+    padding: 40px 20px; /* Top-bottom and left-right padding */
+    margin: 40px 0; /* Space above and below the section */
+    color: #ffffff; /* White text color for contrast */
+}
+
+.details-content {
+    max-width: 800px; /* Restrict content width for better readability */
+    margin: 0 auto; /* Center align the content */
+    text-align: justify; /* Justify text for neat alignment */
+}
+
+.details-content h2 {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 28px; /* Font size for the heading */
+    color: #e0e0e0; /* Light gray color for the heading */
+}
+
+.details-content p {
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 15px; /* Space between paragraphs */
+    color: #f2f2f2; /* Slightly off-white color for the text */
+}
+
+.details-content strong {
+    color: #000000; /* Yellow color for emphasized text to stand out */
+}
+/* Course Recommendation Hero Section */
+.course-hero {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 60vh;
+    background-color: #1a1a1a; /* Dark background color to match the theme */
+    text-align: center;
+    padding: 20px; /* Add padding for better spacing on smaller screens */
+    
+}
+
+.course-content {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay to match the theme */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add some shadow for depth */
+}
+
+.course-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00ffcc; /* Bright color for heading to match the theme */
+}
+
+.course-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #e0e0e0; /* Light gray color for better readability */
+}
+
+/* Connect Section */
+.connect-section {
+    padding: 2rem 1rem;
+    background-color: #1a1a1a;
+}
+
+.centered-heading {
+    text-align: center;
+    color: #00ffcc;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.left, .middle, .right {
+    background: #262626; /* Dark background for sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem; /* Adjusted padding */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.left:hover, .middle:hover, .right:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03);
+}
+
+.left h2, .middle h2, .right h2 {
+    text-align: center;
+    color: #00ffcc;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.contact-table th, .contact-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.contact-table th {
+    background-color: #00ffcc; /* Green background for header */
+    color: #0f0f0f; /* Dark text color */
+}
+
+.contact-table td {
+    background-color: #333333; /* Darker background for cells */
+}
+
+.contact-table tr:nth-child(even) td {
+    background-color: #262626; /* Alternating row colors */
+}
+
+/* Mentor Info */
+
+
+.navbar nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.connect-section {
+    padding: 20px;
+}
+
+.centered-heading {
+    text-align: center;
+    color: #00ffcc; /* Green color from styles.css */
+    font-size: 2.5em; /* Uniformly bigger heading */
+    margin-bottom: 20px;
+}
+
+
+.left h2, .middle h2, .right h2 {
+    text-align: center;
+    color: #00ffcc; /* Green color from styles.css */
+    font-size: 2em; /* Same font size for all section headers */
+    margin-bottom: 20px;
+}
+
+
+
+
+.footer a {
+    color: #e0e0e0; /* Color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.footer a:link, /* Unvisited link */
+.footer a:visited, /* Visited link */
+.footer a:active { /* Active link (when clicked) */
+    color: #e0e0e0; /* Maintain the same color for all link states */
+}
+
+/* Specific color for phone link */
+.footer a[href^="sms:"] {
+    color: #00ffcc; /* Custom color for phone number link */
+}
+
+.footer a[href^="mailto:"] {
+    color: #e0e0e0; /* Ensure email link has the same color as default */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.mentor-info {
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    display: none; /* Hide by default */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left, .middle, .right {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.left {
+    width: 25%; /* Adjusted width */
+}
+
+.middle {
+    width: 50%; /* Wider width for peers */
+}
+
+.right {
+    width: 20%; /* Narrower width */
+}
+
+.left:hover, .middle:hover, .right:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    transform: scale(1.02);
+}
+
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.contact-table th, .contact-table td {
+    padding: 12px;
+    text-align: center;
+}
+
+.contact-table th {
+    background-color: #95a598; /* Green background */
+    color: #e0e0e0; /* Light text color */
+}
+
+.contact-table td {
+    background-color: #2c2c2c; /* Darker background for cells */
+}
+
+.contact-table tr:nth-child(even) td {
+    background-color: #1e1e1e; /* Alternating row colors */
+}
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #00ffcc;
+    color: #0f0f0f;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.hero-content-container {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid #00ffcc; /* Green border added */
+}
+
+.hero-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Module Section */
+.module-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.module-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.module-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.module-card {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+    cursor: pointer;
+}
+
+.module-card:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.module-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.module-details {
+    display: none;
+    margin-top: 1rem;
+}
+
+.module-option {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+/* Footer */
+.page-footer {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #cccccc;
+}
